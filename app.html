@@ -8,8 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+
 
     <!-- Font Awesome-->
     <script src="https://kit.fontawesome.com/6bf18bfbb2.js" crossorigin="anonymous"></script>
@@ -51,11 +52,51 @@
     </nav>
 
         <!-- ==== Main Section ==== -->
-        <main class="flex-shrink-0">
-            <div class="container">
-                
+    <main class="flex-shrink-0">
+        <div class="container mt-5">
+            <div class="row row-cols-1 row-cols-lg-2">
+                <div class="col col-lg-4 border-end border-2">
+                    <h1>The 300: A Coding Project</h1>
+                    <h4 class="lead">
+                        Become a Spartan warrior one loop at a time!.<br>
+                        This is a javascript coding excercise using loops.<br>
+                        Write a program that displays the numbers from 0 to 100. Numbers that are even must be displayed
+                        in <strong>BOLD</strong>
+                    </h4>
+                    <h2 class="mt-5 border-bottom border-2">
+                        Instructions
+                    </h2>
+                    <p>Enter a starting value and a ending value. Press the button and the values will appear</p>
+                </div>
+                <div class="col col-lg-8">
+                    <div>
+                        <h5>Enter Values</h5>
+                        <form class="row gy-2 gx-3">
+                            <div class="col">
+                                <input id="fizzValue" type="number" class="form-control" placeholder="Fizz Value"
+                                    value=0 aria-label="Start Value">
+                            </div>
+                            <div class="col">
+                                <input id="buzzValue" type="number" class="form-control" placeholder="Buzz Value"
+                                value=300 aria-label="Start Value">
+                            </div>
+                            <div class="col-12 d-flex justify-content-end">
+                                <button id="btnSubmit" type="button" class="btn btn-dark btn-lg">Spartan do the FizzBuzz!!</button>
+                            </div>
+                        </form>
+                        <h2 class="mt-5 border-bottom border-2">Results</h2>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-sm">
+                                <tbody id="results">
+                                    <!--Results Go Here-->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </main>
+        </div>
+    </main>
     <!-- ==== Footer Section ==== -->
     <footer class="footer mt-auto py-3 sticky-footer">
         <div class="container-fluid">
@@ -82,6 +123,16 @@
             </div>
         </div>
     </footer>
+
+    <template id="fbTemplate">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </template>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
